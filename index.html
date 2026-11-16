@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Меню Shawarma на Октябрьской. Выберите блюдо и оформите тестовый предзаказ на самовывоз.">
+<meta name="theme-color" content="#ffdc00">
+<title>Shawarma на Октябрьской · Меню и самовывоз</title>
+<link rel="stylesheet" href="site.css">
+<script src="site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#menu">К меню</a>
+<main>
+<div class="site-top" id="home">
+<header class="mast frame">
+  <a href="#home" class="brand" aria-label="Shawarma — главная">
+    <img src="assets/shawarma-logo-original.webp" width="370" height="217" alt="Shawarma">
+  </a>
+  <div class="location">
+    <svg class="icon pin" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M12 2.5a7 7 0 0 0-7 7c0 4.6 7 11.8 7 11.8s7-7.2 7-11.8a7 7 0 0 0-7-7Zm0 4.4a2.6 2.6 0 1 0 0 5.2 2.6 2.6 0 0 0 0-5.2Z"/></svg>
+    <span>Октябрьская, 21к3 <small>Минск</small></span>
+    <svg class="icon chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m8 5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+</header>
+<div class="frame">
+  <h1 class="sr">Шаурма на Октябрьской</h1>
+  <a class="hero" href="assets/promo-1-plus-1-warm.webp" target="_blank" rel="noopener">
+    <img src="assets/promo-1-plus-1-warm.webp" width="1672" height="941" alt="Акция 1+1=4. При покупке двух больших шаверм — два напитка в подарок: кофе, чай или газировка. При покупке двух больших шаверм и двух соусов — две порции закусок на выбор: фри, картофель по-деревенски или луковые кольца. Нажмите, чтобы открыть баннер крупнее.">
+  </a>
+  <section id="menu" class="menu">
+    <form id="menu-search" role="search">
+      <svg class="icon search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="2"/><path d="m15.1 15.1 4.9 4.9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input id="menu-query" type="search" aria-label="Поиск блюд" placeholder="Поиск блюд" autocomplete="off">
+      <button type="button" id="clear-query" aria-label="Очистить поиск" hidden><svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </form>
+</section>
+</div>
+</div>
+<div class="frame">
+  <section class="catalog">
+    <div id="products"></div>
+  </section>
+</div>
+</main>
+<template id="pickup">
+  <section class="info pickup">
+    <div><h2>Где забрать</h2><p>Минск, Октябрьская ул., 21, корп. 3.<br>Назовите номер заказа у окна выдачи.</p><a class="button secondary" href="https://yandex.by/maps/org/shawarma/101602477239/" target="_blank" rel="noopener">Открыть карту ›</a></div>
+    <img src="assets/pickup.webp" alt="Точка Shawarma на Октябрьской с окном выдачи" loading="lazy">
+  </section>
+</template>
+<button type="button" class="button floating-cart" data-basket hidden>
+  <svg class="icon basket-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 9.5h18m-16.5 0 1.6 8.8a2 2 0 0 0 2 1.7h7.8a2 2 0 0 0 2-1.7l1.6-8.8M7.5 9.5l3-5m6 5-3-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  Корзина <span class="count" data-count>0</span>
+</button>
+<button type="button" class="cooking-strip" id="cooking-strip" aria-label="Посмотреть заказ" aria-haspopup="dialog" aria-controls="order-dialog" hidden></button>
+<div id="announcement" class="sr" role="status" aria-live="polite"></div>
+<dialog id="item-dialog" aria-label="Настройка блюда"><div id="item-panel"></div></dialog>
+<dialog id="size-dialog" aria-label="Размер шаурмы"><div id="size-panel"></div></dialog>
+<dialog id="addons-dialog" aria-label="Добавки"><div id="addons-panel"></div></dialog>
+<dialog id="basket-dialog" aria-label="Корзина и самовывоз"><div id="basket-panel"></div></dialog>
+<dialog id="checkout-dialog" aria-label="Оформление заказа"><div id="checkout-panel"></div></dialog>
+<dialog id="fulfillment-dialog" aria-label="Способ получения"><div id="fulfillment-panel"></div></dialog>
+<dialog id="order-dialog" aria-label="Статус заказа"><div id="order-panel"></div></dialog>
+<dialog id="info-dialog" aria-label="Как получить заказ"><div id="info-panel"></div></dialog>
+</body>
+</html>
